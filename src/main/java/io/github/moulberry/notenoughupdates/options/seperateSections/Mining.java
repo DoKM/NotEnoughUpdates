@@ -93,7 +93,7 @@ public class Mining {
     @Expose
     @ConfigOption(
             name = "Dwarven Overlay",
-            desc = "Show an overlay with useful information on the screen while in Dwarven Mines"
+            desc = "Show an Overlay with useful information on the screen while in Dwarven Mines"
     )
     @ConfigEditorBoolean
     @ConfigAccordionId(id = 2)
@@ -102,8 +102,8 @@ public class Mining {
     @Expose
     @ConfigOption(
             name = "Dwarven Text",
-            desc = "\u00a7eDrag text to change the appearance of the overlay\n" +
-                    "\u00a7rGo to the Dwarven Mines to show this overlay with useful information"
+            desc = "\u00a7eDrag text to change the appearance of the Overlay\n" +
+                    "\u00a7rGo to the Dwarven Mines to show this Overlay with useful information"
     )
     @ConfigEditorDraggableList(
             exampleText = {"\u00a73Goblin Slayer: \u00a7626.5%\n\u00a73Lucky Raffle: \u00a7c0.0%",
@@ -119,7 +119,7 @@ public class Mining {
     @Expose
     @ConfigOption(
             name = "Overlay Position",
-            desc = "Change the position of the Dwarven Mines information overlay (commisions, powder & forge statuses)"
+            desc = "Change the position of the Dwarven Mines information Overlay (commisions, powder & forge statuses)"
     )
     @ConfigEditorButton(
             runnableId = 1,
@@ -131,13 +131,37 @@ public class Mining {
     @Expose
     @ConfigOption(
             name = "Overlay Style",
-            desc = "Change the style of the Dwarven Mines information overlay"
+            desc = "Change the style of the Dwarven Mines information Overlay"
     )
     @ConfigEditorDropdown(
             values = {"Background", "No Shadow", "Shadow", "Full Shadow"}
     )
     @ConfigAccordionId(id = 2)
     public int overlayStyle = 0;
+
+
+    @Expose
+    @ConfigOption(
+            name = "Forge Display",
+            desc = "Change what gets shown in the Forge Display"
+    )
+    @ConfigEditorDropdown(
+            values = {"Only Done", "Only Working", "Everything Except Locked", "Everything"}
+    )
+    @ConfigAccordionId(id = 2)
+    public int forgeDisplay = 1;
+
+    @Expose
+    @ConfigOption(
+            name = "Forge Location",
+            desc = "Change when the forge display gets shown"
+    )
+    @ConfigEditorDropdown(
+            values = {"Dwarven mines", "DM+Crystal Hollows", "Everywhere except dungeons", "Everywhere"}
+    )
+    @ConfigAccordionId(id = 2)
+    public int forgeDisplayLocation = 0;
+
 
     @ConfigOption(
             name = "Metal Detector Solver",
@@ -148,7 +172,7 @@ public class Mining {
 
     @Expose
     @ConfigOption(
-            name = "Enabled",
+            name = "Enable Waypoints",
             desc = "Enabled the metal detector solver for Mines of Divan, to use this stand still to calculate possible blocks and then if required stand" +
                     " still on another block."
     )
@@ -174,7 +198,7 @@ public class Mining {
 
     @Expose
     @ConfigOption(
-            name = "Enabled",
+            name = "Enabled Overlay",
             desc = "Enables the Crystal Hollows Overlay."
     )
     @ConfigEditorBoolean
@@ -183,7 +207,7 @@ public class Mining {
 
     @Expose
     @ConfigOption(
-            name = "Position",
+            name = "Overlay Position",
             desc = "Change the position of the Crystal Hollows Overlay."
     )
     @ConfigEditorButton(
@@ -252,7 +276,7 @@ public class Mining {
     @Expose
     @ConfigOption(
             name = "Show Icons",
-            desc = "Show icons in the overlay that represent the part."
+            desc = "Show icons in the Crystal Hollows Overlay that represent the part."
     )
     @ConfigEditorBoolean
     @ConfigAccordionId(id = 4)
@@ -345,7 +369,6 @@ public class Mining {
     @ConfigOption(
             name = "In Inventory Color",
             desc = "Change the colour when the part is in the inventory."
-
     )
     @ConfigEditorDropdown(
             values = {"Black", "Dark Blue", "Dark Green", "Dark Aqua", "Dark Red", "Dark Purple", "Gold", "Gray", "Dark Gray", "Blue", "Green", "Aqua", "Red", "Light Purple", "Yellow", "White"}
@@ -357,7 +380,6 @@ public class Mining {
     @ConfigOption(
             name = "In Storage Color",
             desc = "Change the colour when the part is in the storage."
-
     )
     @ConfigEditorDropdown(
             values = {"Black", "Dark Blue", "Dark Green", "Dark Aqua", "Dark Red", "Dark Purple", "Gold", "Gray", "Dark Gray", "Blue", "Green", "Aqua", "Red", "Light Purple", "Yellow", "White"}
@@ -369,7 +391,6 @@ public class Mining {
     @ConfigOption(
             name = "Missing Color",
             desc = "Change the colour when the part is missing."
-
     )
     @ConfigEditorDropdown(
             values = {"Black", "Dark Blue", "Dark Green", "Dark Aqua", "Dark Red", "Dark Purple", "Gold", "Gray", "Dark Gray", "Blue", "Green", "Aqua", "Red", "Light Purple", "Yellow", "White"}
