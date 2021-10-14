@@ -31,6 +31,16 @@ public class Mining {
 
     @Expose
     @ConfigOption(
+            name = "Hide waypoints when at Location",
+            desc = "Hides the Commission Waypoints if you are already at the location of the waypoint.\n" +
+                    "Only active if Waypoints are set to \"Commissions Only\""
+    )
+    @ConfigEditorBoolean
+    @ConfigAccordionId(id = 0)
+    public boolean hideWaypointIfAtLocation = true;
+
+    @Expose
+    @ConfigOption(
             name = "Emissary Waypoints",
             desc = "Show waypoints in the Dwarven mines to emissaries\n" +
                     "Use \"Commission End\" to only show after finishing commissions"
